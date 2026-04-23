@@ -6,11 +6,11 @@
 #include "AttackGambaSaveGame.generated.h"
 
 UCLASS()
-class YOURPROJECT_API UAttackGambaSaveGame : public USaveGame
+class ATAQUEGAMBA_API UAttackGambaSaveGame : public USaveGame
 {
-    GENERATED_BODY()
+	GENERATED_BODY()
 
 public:
-    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Save")
-    FSavedGameData SaveData;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Save")
+	FSavedGameData SaveData;
 };
