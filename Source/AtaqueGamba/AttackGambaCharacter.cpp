@@ -3,7 +3,6 @@
 #include "Kismet/GameplayStatics.h"
 #include "GameFramework/PlayerController.h"
 #include "Engine/World.h"
-#include "AttackGambaCharacter.h"
 
 AAttackGambaCharacter::AAttackGambaCharacter()
 {

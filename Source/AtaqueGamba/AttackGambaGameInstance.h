@@ -6,46 +6,46 @@
 #include "AttackGambaGameInstance.generated.h"
 
 UCLASS()
-class ATAQUEGAMBA_API UAttackGambaGameInstance : public UGameInstance
+class YOURPROJECT_API UAttackGambaGameInstance : public UGameInstance
 {
-	GENERATED_BODY()
+    GENERATED_BODY()
 
 public:
-	UAttackGambaGameInstance();
+    UAttackGambaGameInstance();
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Save")
-	FSavedGameData SavedGameData;
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Save")
+    FSavedGameData SavedGameData;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Save")
-	bool bHasUnsavedProgress = false;
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Save")
+    bool bHasUnsavedProgress = false;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Save")
-	FString ActiveSaveSlot = TEXT("SaveSlot_1");
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Save")
+    FString ActiveSaveSlot = TEXT("SaveSlot_1");
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Save")
-	int32 UserIndex = 0;
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Save")
+    int32 UserIndex = 0;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Punishment")
-	int32 PunishmentAmmoLoss = 10;
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Punishment")
+    int32 PunishmentAmmoLoss = 10;
 
-	UFUNCTION(BlueprintCallable, Category = "Save")
-	void SaveToDisk(const FString& SlotName);
+    UFUNCTION(BlueprintCallable, Category = "Save")
+    void SaveToDisk(const FString& SlotName);
 
-	UFUNCTION(BlueprintCallable, Category = "Save")
-	bool LoadFromDisk(const FString& SlotName);
+    UFUNCTION(BlueprintCallable, Category = "Save")
+    bool LoadFromDisk(const FString& SlotName);
 
-	UFUNCTION(BlueprintCallable, Category = "Save")
-	void InitializeDefaultSaveData();
+    UFUNCTION(BlueprintCallable, Category = "Save")
+    void InitializeDefaultSaveData();
 
-	UFUNCTION(BlueprintCallable, Category = "Save")
-	FString GetFormattedSaveTimestamp() const;
+    UFUNCTION(BlueprintCallable, Category = "Save")
+    FString GetFormattedSaveTimestamp() const;
 
-	UFUNCTION(BlueprintCallable, Category = "Quit")
-	bool HandleCloseRequest();
+    UFUNCTION(BlueprintCallable, Category = "Quit")
+    bool HandleCloseRequest();
 
-	UFUNCTION(BlueprintImplementableEvent, Category = "Quit")
-	void OnCloseIntercepted();
+    UFUNCTION(BlueprintImplementableEvent, Category = "Quit")
+    void OnCloseIntercepted();
 
-	UFUNCTION(BlueprintCallable, Category = "Punishment")
-	bool ApplyPendingPunishment();
+    UFUNCTION(BlueprintCallable, Category = "Punishment")
+    bool ApplyPendingPunishment();
 };
